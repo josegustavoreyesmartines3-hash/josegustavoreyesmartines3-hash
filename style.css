@@ -1,0 +1,292 @@
+/* 🔹 Configuración general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* 🔹 Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #00ff88;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ff88;
+}
+
+/* 🔹 Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-logo img {
+  width: 90px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px #00ff88);
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 10px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 span {
+  color: #00ff88;
+}
+
+.hero h2 {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #00ff88;
+  color: #00ff88;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #00ff88;
+  color: #000;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('baloncesto-negro-contra-telon-fondo-baloncesto-anillo-sobre-fondo-oscuro-concepto-baloncesto-apuestas-deportivas-espacio-copia-ilustracion-3d-representacion-3d_99433-9794.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+/* 🔹 Secciones */
+section {
+  padding: 100px 10% 60px;
+}
+
+.info, .contactos {
+  background-color: #111;
+}
+
+/* 🔹 Features y Cards */
+.features {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.feature h3 {
+  color: #00ff88;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px;
+  color: #00ff88;
+}
+
+.card p {
+  margin: 0 15px 20px;
+  color: #ccc;
+}
+
+/* 🔹 Horarios */
+.horarios {
+  background-color: #0f0f0f;
+  text-align: center;
+}
+
+.tabla-horarios {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto 0;
+  border-collapse: collapse;
+}
+
+.tabla-horarios th, .tabla-horarios td {
+  border: 1px solid #333;
+  padding: 12px;
+}
+
+.tabla-horarios th {
+  background-color: #00ff88;
+  color: #000;
+}
+
+.tabla-horarios td {
+  background-color: #1b1b1b;
+  color: #ddd;
+}
+
+/* 🔹 Contactos */
+.contact-form {
+  max-width: 500px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 12px;
+  background-color: #1b1b1b;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  cursor: pointer;
+}
+
+/* 🔹 Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup:target {
+  display: flex;
+}
+
+.popup-content {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+.popup-content h2 {
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-form input,
+.popup-form select {
+  padding: 10px;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #00ff88;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* 🔹 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0b0b0b;
+  border-top: 1px solid #222;
+  color: #666;
+}
